@@ -1,0 +1,112 @@
+@import "./reset.css";
+html {
+    font-family: 'Nanum Gothic';
+}
+
+.body-container {
+    box-sizing: border-box;
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.searchInput {
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+
+.searchInput>input {
+    width: 70%;
+    height: 30px;
+    padding: 0 5px;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid #999;
+    font-size: 20px;
+}
+
+.searchInput>input:focus {
+    outline: none;
+    border-bottom: 2px solid orange;
+}
+
+.searchInput>span {
+    margin: 0 7px;
+}
+
+.searchInput>button {
+    background-color: orange;
+    border: none;
+    padding: 5px 10px;
+    font-size: 20px;
+    box-sizing: border-box;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.searchInput>button:hover {
+    background-color: darkorange;
+}
+
+.searchInput>button:focus {
+    outline: none;
+}
+
+.searchResult {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.card-container {
+    display: grid;
+    gap: 15px;
+}
+
+.searchResult>p {
+    font-size: 30px;
+}
+
+@media screen and (min-width: 1120px) {
+    .card-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media screen and (max-width: 1120px) {
+    .card-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 890px) {
+    .card-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .card-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.card {
+    width: 250px;
+    height: 140px;
+    overflow: hidden;
+}
+
+img {
+    width: 100%;
+}
